@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Criativa</title>
+    <link rel="icon" href="./images/icon_ecomanda.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            background-color: #2258FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+        .header-content {
+            z-index: 10;
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        .header-logo {
+            height: 50px;
+        }
+
+        /* Estilo para os balões de texto */
+
+
+/* Estilo para os balões de texto */
+.bubble-container {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.bubble {
+    position: relative;
+    display: inline-block;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 1.2em;
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.bubble::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 15px 0;
+    border-color: #f5f5f5 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bubble1 { animation-delay: 0s; }
+.bubble2 { animation-delay: 0.5s; }
+.bubble3 { animation-delay: 1s; }
+.bubble4 { animation-delay: 1.5s; }
+.bubble5 { animation-delay: 2s; }
+.bubble6 { animation-delay: 2.5s; }
+.bubble7 { animation-delay: 3s; }
+.bubble8 { animation-delay: 3.5s; }
+.bubble9 { animation-delay: 4s; }
+
+/* Animação dos balões de texto */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+}
+
+
+
+
+        h1 {
+            font-size: 5rem;
+            font-family: 'Optima';
+            margin: 0;
+            color: #2258ff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: floatText 3s ease-in-out infinite;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #f0f0f0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+            opacity: 0;
+        }
+
+        ul {
+            font-size: 1.5rem;
+
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            background-color: #fff;
+            color: #2258FF;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            animation: fadeIn 2s ease-in-out 1.5s forwards;
+            opacity: 0;
+        }
+
+        .btn:hover {
+            background-color: #FF5F6D;
+            color: #fff;
+        }
+
+        @keyframes floatText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave {
+            fill: #fff;
+            animation: wave 10s linear infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .section {
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #2258FF;
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            animation: underline 2s ease-in-out infinite;
+        }
+
+        @keyframes underline {
+            0%, 100% {
+                width: 80px;
+            }
+            50% {
+                width: 100px;
+            }
+        }
+
+        .about {
+            background-color: #16213e;
+        }
+
+        .solutions {
+            background: #2258FF;
+            position: relative;
+        }
+
+
+        .solutions::before, .solutions::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: floatShapes 8s infinite linear;
+        }
+
+        .solutions::before {
+            top: 20%;
+            left: 10%;
+        }
+
+        .solutions::after {
+            bottom: 20%;
+            right: 10%;
+        }
+
+        @keyframes floatShapes {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 2rem;
+            color: #fff;
+            transition: transform 0.3s ease;
+            transform: scale(1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card:hover {
+            transform: scale(1.05);
+        }
+
+        .solution-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2258FF;
+        }
+
+        .solution-card p {
+            font-size: 1rem;
+            color: #2258FF;
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, #00b4db, #0083b0);
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+            transform: scale(1);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonial-card p {
+            color: #fff;
+        }
+
+        .contact {
+            background-color: #1a1a2e;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            box-shadow: 0 0 10px rgba(0, 180, 219, 0.8);
+        }
+
+        .contact-form button {
+            background-color: #00b4db;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0083b0;
+        }
+
+        .footer {
+            background-color: #2258FF;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1><img class="header-logo" src="./images/logo_ecomanda_negativo.png" alt=""></h1>
+<p >
+        Organize 
+        <strong style="
+/*            display: block;*/
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #00FF6D; /* Cor do texto */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
+        ">pedidos</strong>,<br>
+        <strong style="
+/*            display: block;*/
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #00FF6D; /* Cor do texto para o segundo item */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
+        ">vendas</strong> e<br>
+        <strong style="
+/*            display: block;*/
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #00FF6D; /* Cor do texto para o terceiro item */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
+        ">compras</strong> de maneira eficiente e prática.
+    </p>
+</body>     
+
+
+
+
+ <button onclick="document.getElementById('secao-alvo').scrollIntoView({ behavior: 'smooth' });" class="btn">Fale conosco</button>
+    </div>
+    <!-- Balões de texto representando pedidos de clientes -->
+    <div class="bubble-container">
+        <div class="bubble bubble1">"Gostaria de um cappuccino, por favor!"</div>
+        <div class="bubble bubble2">"Um hambúrguer com batatas fritas, obrigado!"</div>
+        <div class="bubble bubble3">"Por favor, traga um suco de laranja natural."</div>
+        <div class="bubble bubble4">"Qual valor da minha comanda?"</div>
+        <div class="bubble bubble5">"Tem salada Caesar?"</div>
+        <div class="bubble bubble6">"Quero um smoothie de frutas vermelhas."</div>
+        <div class="bubble bubble7">"Uma pizza margherita com extra de queijo, por favor."</div>
+        <div class="bubble bubble8">"Me dá mais uma"</div> 
+        <div class="bubble bubble9">"Gostaria de fechar a conta."</div>
+    </div>
+</header>
+
+
+<section class="section about">
+    <h2>Sobre o Sistema</h2>
+    <br/>
+    <p>
+        Nosso sistema é projetado para <strong>gerenciar de forma eficiente</strong>, permitindo assim que você foque no seu negócio. 
+        Com uma interface intuitiva e recursos avançados, você poderá:
+    </p>
+    <br/>
+    <ul style="
+        padding-left: 1.5em;
+        list-style-type: none;
+        margin-top: 0;
+    ">
+        <li style="
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        ">Organizar <strong style="
+            color: #FF5F6D;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        ">pedidos</strong> de forma ágil e precisa, desde a entrada até a entrega.</li>
+        <li style="
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        ">Gerenciar <strong style="
+            color: #FFC371;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        ">vendas</strong> com relatórios detalhados e análises em tempo real.</li>
+        <li style="
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        ">Controlar <strong style="
+            color: #6A5ACD;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        ">compras</strong> para garantir que seu estoque esteja sempre atualizado.</li>
+    </ul>
+    <br/>
+    <p>
+        Com nosso sistema, você terá uma visão clara e detalhada de todos os processos, permitindo que tome decisões estratégicas e aumente a eficiência operacional do seu negócio.
+    </p>
+</section>
+
+
+
+<section class="section solutions">
+        <h2>Soluções Criativas</h2>
+    </div>
+    <div class="solutions-grid">
+        <div class="solution-card">
+            <h3>Cardápio Digital</h3>
+            <p>Visualize o cardápio de forma interativa e moderna, oferecendo uma experiência de pedido simplificada e atraente para os clientes.</p>
+            <div class="animation-container">
+                <div class="animation-icon">
+                    <img width="60" height="60" src="./icons/utensilios-1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="solution-card">
+            <h3>Verificação de Pagamento</h3>
+            <p>Cheque rapidamente se o cliente já pagou a conta, facilitando a gestão e agilizando o processo de fechamento.</p>
+            <div class="animation-container">
+                <div class="animation-icon">
+                    <img width="60" height="60" src="./icons/pagamento-1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="solution-card">
+            <h3>Gestão de Vendas em Aberto</h3>
+            <p>Monitore e gerencie vendas pendentes de forma eficiente, com ferramentas que permitem um controle preciso e fácil.</p>
+            <div class="animation-container">
+                <div class="animation-icon">
+                    <img width="60" height="60" src="./icons/vendas-1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="solution-card">
+            <h3>Gestão de Compras e Vendas Pagas</h3>
+            <p>Controle compras realizadas e vendas pagas com a opção de exportar dados para planilhas, facilitando a análise e o relatório.</p>
+            <div class="animation-container">
+                <div class="animation-icon">
+                    <img width="60" height="60" src="./icons/carrinho-1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="section testimonials">
+    <h2>O que dizem sobre nós</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="./images/perfil-de-usuario.png" alt="Foto do Testemunho 1" class="testimonial-photo">
+                <div class="testimonial-info">
+                    <h3>João da Silva</h3>
+                    <p><em>Cliente</em></p>
+                </div>
+            </div>
+            <div class="testimonial-bubble">
+                <p>"Tomei muito prejuízo usando a comanda de papel, depois que comecei a usar a comanda online do eComandas, tudo mudou!"</p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="./images/perfil-de-usuario.png" alt="Foto do Testemunho 2" class="testimonial-photo">
+                <div class="testimonial-info">
+                    <h3>Maria Oliveira</h3>
+                    <p><em>Cliente</em></p>
+                </div>
+            </div>
+            <div class="testimonial-bubble">
+                <p>"O eComandas me ajudau a ter mais controle das minhas vendas dentro do meu negócio, recomendo demais!"</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+/* Estilos para a seção de depoimentos */
+.testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.testimonial-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.testimonial-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.testimonial-info p {
+    margin: 0;
+    color: #777;
+}
+
+.testimonial-bubble {
+    position: relative;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-bubble p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.testimonial-bubble::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+}
+</style>
+
+
+
+<section id="secao-alvo" class="section contact">
+    <h2 class="titulo-contato" >Entre em Contato</h2>
+    <div class="contact-form">
+        <div class="form-paper">
+            <div class="form-header">
+            </div><p class="contact-text">Fale conosco</p> 
+            <div class="form-body">
+                <button onclick="window.open('https://api.whatsapp.com/send?phone=5532998512325&text=Quero%20saber%20mais%20sobre%20a%20solu%C3%A7%C3%A3o%20eComanda!', '_blank')">Quero mais eficiência!</button>
+
+
+
+            <div class="form-footer">
+                
+
+            <p class="social-link">
+                <img src="./icons/instagram (2).png" alt="Instagram"> 
+                <a href="https://www.instagram.com/comanda_eletronica" target="_blank" aria-label="Instagram"> 
+                    @comanda_eletronica
+                </a>
+            </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style type="text/css">
+
+.titulo-contato {
+    color: #2258FF;
+}
+
+.contact-text {
+    color: #16213e;
+}
+
+.social-link img {
+    height: 24px;
+    transform: scale(0.9);
+}
+
+.social-link a {
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    color: #C13584; /* Cor do Instagram */
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link a:hover {
+    color: #E1306C; 
+    transform: scale(1.05);
+}
+
+
+
+
+    /* Estilos para a seção de contato */
+.contact {
+    padding: 40px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.form-paper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #fff 100%);
+    /* Efeito de papel */
+    background: #fdfdfd;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.form-paper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 120px;
+    height: 20px;
+    background: #e6e6e6;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.form-header p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.form-body {
+    padding: 20px;
+    position: relative;
+    background: #fff;
+}
+
+.form-body input,
+.form-body textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.form-body textarea {
+    resize: vertical;
+}
+
+.form-body button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.form-body button:hover {
+    background-color: #45a049;
+}
+
+.form-body input::placeholder,
+.form-body textarea::placeholder {
+    color: #aaa;
+}
+
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #888;
+}
+</style>
+
+
+
+
+
+<footer class="footer">
+    <!-- <p>&copy; 2024 eComanda - Sem papel, sem dor de cabeça 😉</p> -->
+    <p>eComanda &copy; 2024. - Sem papel, sem dor de cabeça 😉</p>
+</footer>
+
+</body>
+</html>
