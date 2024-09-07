@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eComanda</title>
+    <title>Landing Page Criativa</title>
     <link rel="icon" href="./images/icon_ecomanda.png">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -134,7 +135,7 @@
         }
 
         .btn:hover {
-            background-color: #FF5F6D;
+            background-color: #2258FF;
             color: #fff;
         }
 
@@ -362,10 +363,32 @@
     </style>
 </head>
 <body>
+ 
 
 <header>
+
+    <div class="navbar">
+        <span class="openbtn" onclick="openMenu()">☰ <img src="./images/logo_ecomanda_negativo.png" alt=""></span>
+    </div>
+    
+    <div id="menu" class="menu-closed">
+        <span class="closebtn" onclick="openMenu()">✖</span>
+        <ul>
+            <li><a onclick="document.getElementById('secao-sobre').scrollIntoView({ behavior: 'smooth' });" class="btn" href="#sobre">Sobre</a></li>
+            <li><a onclick="document.getElementById('secao-solution').scrollIntoView({ behavior: 'smooth' });" class="btn" href="#soluções">Soluções</a></li>
+            <li><a onclick="document.getElementById('secao-alvo').scrollIntoView({ behavior: 'smooth' });" class="btn" href="#contato">Contato</a></li>
+        </ul>
+    </div>
+    
+    <script src="scripts.js"></script>
+    
+    
+    
+    
+    
+
     <div class="header-content">
-        <h1><img class="header-logo" src="./images/logo_ecomanda_negativo.png" alt=""></h1>
+        <h1></h1>
 <p >
         Organize 
         <strong style="
@@ -390,7 +413,11 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
         ">compras</strong> de maneira eficiente e prática.
     </p>
-</body>     
+</body>   
+
+<div class="navbar">
+    <span class="openbtn" onclick="openMenu()">☰ <img src="./images/logo_ecomanda_negativo.png" alt=""></span>
+</div>
 
 
 
@@ -412,7 +439,7 @@
 </header>
 
 
-<section class="section about">
+<section id="secao-sobre" class="section about">
     <h2>Sobre o Sistema</h2>
     <br/>
     <p>
@@ -455,7 +482,7 @@
 
 
 
-<section class="section solutions">
+<section id="secao-solution" class="section solutions">
         <h2>Soluções Criativas</h2>
     </div>
     <div class="solutions-grid">
@@ -641,26 +668,22 @@
     color: #16213e;
 }
 
+.social-link {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o ícone e o texto no centro */
+}
+
 .social-link img {
-    height: 24px;
-    transform: scale(0.9);
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+    height: 20px;
 }
 
 .social-link a {
-    position: relative;
-    align-items: center;
-    text-decoration: none;
-    color: #C13584; /* Cor do Instagram */
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #000; /* Define a cor do texto do link (você pode ajustar conforme necessário) */
+    font-size: 16px; /* Define o tamanho da fonte (você pode ajustar conforme necessário) */
 }
 
-.social-link a:hover {
-    color: #E1306C; 
-    transform: scale(1.05);
-}
 
 
 
